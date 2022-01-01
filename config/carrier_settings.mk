@@ -1,10 +1,3 @@
-# Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    vendor/extra/CarrierSettings/overlay
-
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/extra/CarrierSettings/overlay/common
-
 # CarrierSettings, replace CarrierConfig
 PRODUCT_PACKAGES += \
     CarrierSettings
