@@ -14,5 +14,21 @@ PRODUCT_PACKAGES += \
     NgaResources
 endif
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CaptivePortalLoginOverlayExtra \
+    CellBroadcastServiceOverlayExtra \
+    GoogleConfigOverlayExtra \
+    GooglePermissionControllerOverlayExtra \
+    PixelConfigOverlayCommonExtra
+ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    SystemUIGoogleOverlayExtraNio
+endif
+ifneq ($(filter %river,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    SystemUIGoogleOverlayExtraRiver
+endif
+
 # Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
