@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     CellBroadcastServiceOverlayExtra \
     GoogleConfigOverlayExtra \
     GooglePermissionControllerOverlayExtra \
+    NexusLauncherOverlay \
     PixelConfigOverlayCommonExtra \
     SystemUIGoogleOverlayExtra
 
