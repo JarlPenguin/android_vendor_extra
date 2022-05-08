@@ -25,9 +25,12 @@ MODULE_BUILD_FROM_SOURCE := false
 PRODUCT_SOONG_NAMESPACES += \
     vendor/extra/apex
 
-# ApexOverlay
+# Overlays
 PRODUCT_PACKAGES += \
-    ApexOverlay
+    ApexOverlay \
+    CaptivePortalLoginOverlayExtra \
+    CellBroadcastServiceOverlayExtra \
+    GooglePermissionControllerOverlayExtra
 
 # ModuleMetadata
 PRODUCT_PACKAGES += \

@@ -16,10 +16,7 @@ endif
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CaptivePortalLoginOverlayExtra \
-    CellBroadcastServiceOverlayExtra \
     GoogleConfigOverlayExtra \
-    GooglePermissionControllerOverlayExtra \
     NexusLauncherOverlay \
     PixelConfigOverlayCommonExtra \
     SystemUIGoogleOverlayExtra
