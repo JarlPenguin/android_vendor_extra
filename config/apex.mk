@@ -32,9 +32,12 @@ PRODUCT_PACKAGES += \
     CellBroadcastServiceOverlayExtra \
     GooglePermissionControllerOverlayExtra
 
-# ModuleMetadata
+# Apps
 PRODUCT_PACKAGES += \
-    ModuleMetadataGoogle
+    CaptivePortalLoginGoogle \
+    ModuleMetadataGoogle \
+    NetworkPermissionConfigGoogle \
+    NetworkStackGoogle
 
 # Google Apexes
 PRODUCT_PACKAGES += \
