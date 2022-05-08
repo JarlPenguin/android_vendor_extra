@@ -1,10 +1,10 @@
 # CarrierSettings
-ifneq ($(filter %river,$(TARGET_PRODUCT)),)
-$(call inherit-product, vendor/extra/config/carrier_settings.mk)
-endif
+#ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
+#$(call inherit-product, vendor/extra/config/carrier_settings.mk)
+#endif
 
 # Enable Google Play system updates for nio
-ifneq ($(filter %nio %river,$(TARGET_PRODUCT)),)
+ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
 include vendor/extra/config/apex.mk
 endif
 
@@ -20,15 +20,8 @@ PRODUCT_PACKAGES += \
     CellBroadcastServiceOverlayExtra \
     GoogleConfigOverlayExtra \
     GooglePermissionControllerOverlayExtra \
-    PixelConfigOverlayCommonExtra
-ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    SystemUIGoogleOverlayExtraNio
-endif
-ifneq ($(filter %river,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    SystemUIGoogleOverlayExtraRiver
-endif
+    PixelConfigOverlayCommonExtra \
+    SystemUIGoogleOverlayExtra
 
 # Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
