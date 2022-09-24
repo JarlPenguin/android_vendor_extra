@@ -15,12 +15,6 @@ ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
 include vendor/extra/config/apex.mk
 endif
 
-# NGA
-ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    NgaResources
-endif
-
 # Overlays
 PRODUCT_PACKAGES += \
     GoogleConfigOverlayExtra \
