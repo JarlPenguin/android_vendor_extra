@@ -19,7 +19,6 @@ endif
 PRODUCT_PACKAGES += \
     GoogleConfigOverlayExtra \
     NetworkStackOverlayExtra \
-    NexusLauncherOverlay \
     PixelConfigOverlayCommonExtra \
     SystemUIGoogleOverlayExtra
 
