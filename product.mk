@@ -1,6 +1,10 @@
 # CarrierSettings
 #ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
 #$(call inherit-product, vendor/extra/config/carrier_settings.mk)
+
+# Include Carrier Runtime Configuration
+#PRODUCT_PACKAGE_OVERLAYS += \
+#    vendor/hentai/CarrierSettings/overlay
 #endif
 
 # Apps
