@@ -16,6 +16,10 @@ PRODUCT_PACKAGES += \
 
 # Enable Google Play system updates for nio
 ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
+MAINLINE_INCLUDE_ART_MODULE := true
+MAINLINE_INCLUDE_BT_MODULE := true
+MAINLINE_INCLUDE_UWB_MODULE := true
+MAINLINE_INCLUDE_WIFI_MODULE := true
 include vendor/extra/config/apex.mk
 endif
 
