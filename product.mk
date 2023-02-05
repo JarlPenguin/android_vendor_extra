@@ -7,13 +7,6 @@
 #    vendor/hentai/CarrierSettings/overlay
 #endif
 
-# Apps
-PRODUCT_PACKAGES += \
-    Drive \
-    Maps \
-    PrebuiltGmail \
-    TipsPrebuilt
-
 # Enable Google Play system updates for nio
 ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
 MAINLINE_INCLUDE_ART_MODULE := true
@@ -27,6 +20,9 @@ endif
 ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
     NgaResources
+
+PRODUCT_PACKAGES += \
+    nga
 endif
 
 # Overlays
@@ -36,10 +32,6 @@ PRODUCT_PACKAGES += \
     NexusLauncherOverlay \
     PixelConfigOverlayCommonExtra \
     SystemUIGoogleOverlayExtra
-
-# Permissions
-PRODUCT_PACKAGES += \
-    pixel_tips
 
 # Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
