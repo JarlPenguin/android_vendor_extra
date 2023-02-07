@@ -15,11 +15,39 @@
 #
 
 # Networkstack certificate
-PRODUCT_MAINLINE_SEPOLICY_DEV_CERTIFICATES := vendor/extra/apex/NetworkStack
+PRODUCT_MAINLINE_SEPOLICY_DEV_CERTIFICATES=vendor/extra/apex/certificates
 
 # Prebuilt module SDKs require prebuilt modules to work, and currently
 # prebuilt modules are only provided for com.google.android.xxx.
-MODULE_BUILD_FROM_SOURCE := false
+MODULE_BUILD_FROM_SOURCE ?= false
+
+SOONG_CONFIG_NAMESPACES += wifi_module
+SOONG_CONFIG_wifi_module += source_build
+SOONG_CONFIG_wifi_module_source_build := true
+
+SOONG_CONFIG_NAMESPACES += uwb_module
+SOONG_CONFIG_uwb_module += source_build
+SOONG_CONFIG_uwb_module_source_build := true
+
+SOONG_CONFIG_NAMESPACES += bluetooth_module
+SOONG_CONFIG_bluetooth_module += source_build
+SOONG_CONFIG_bluetooth_module_source_build := true
+
+ifneq ($(MAINLINE_INCLUDE_ART_MODULE),true)
+ART_MODULE_BUILD_FROM_SOURCE := true
+endif
+
+ifeq ($(MAINLINE_INCLUDE_BT_MODULE),true)
+SOONG_CONFIG_bluetooth_module_source_build := false
+endif
+
+ifeq ($(MAINLINE_INCLUDE_UWB_MODULE),true)
+SOONG_CONFIG_uwb_module_source_build := false
+endif
+
+ifeq ($(MAINLINE_INCLUDE_WIFI_MODULE),true)
+SOONG_CONFIG_wifi_module_source_build := false
+endif
 
 # Enable Google Play system updates support
 PRODUCT_SOONG_NAMESPACES += \
