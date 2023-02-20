@@ -4,7 +4,7 @@
 
 # Include Carrier Runtime Configuration
 #PRODUCT_PACKAGE_OVERLAYS += \
-#    vendor/hentai/CarrierSettings/overlay
+#    vendor/extra/CarrierSettings/overlay
 #endif
 
 # Enable Google Play system updates for nio
