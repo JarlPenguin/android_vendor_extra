@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="config_cameraGesturePackage">org.lineageos.aperture</string>
+    <string name="config_cameraGesturePackage">com.motorola.camera3</string>
 </resources>
