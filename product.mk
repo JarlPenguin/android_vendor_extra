@@ -8,7 +8,7 @@ PRODUCT_PACKAGES += \
     PrebuiltGmail
 
 # CarrierSettings
-#ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
+#ifneq ($(filter %nio %surya,$(TARGET_PRODUCT)),)
 #$(call inherit-product, vendor/extra/config/carrier_settings.mk)
 
 # Include Carrier Runtime Configuration
@@ -17,21 +17,12 @@ PRODUCT_PACKAGES += \
 #endif
 
 # Enable Google Play system updates for nio
-ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
+ifneq ($(filter %nio %surya,$(TARGET_PRODUCT)),)
 MAINLINE_INCLUDE_ART_MODULE := true
 MAINLINE_INCLUDE_BT_MODULE := true
 MAINLINE_INCLUDE_UWB_MODULE := true
 MAINLINE_INCLUDE_WIFI_MODULE := true
 include vendor/extra/config/apex.mk
-endif
-
-# NGA
-ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    NgaResources
-
-PRODUCT_PACKAGES += \
-    nga
 endif
 
 # Overlays
