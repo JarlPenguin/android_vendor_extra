@@ -29,9 +29,19 @@ endif
 PRODUCT_PACKAGES += \
     GoogleConfigOverlayExtra \
     NetworkStackOverlayExtra \
-    NexusLauncherOverlay \
-    PixelConfigOverlayCommonExtra \
-    SystemUIGoogleOverlayExtra
+    PixelConfigOverlayCommonExtra
+
+ifneq ($(filter %nio,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    NexusLauncherOverlayNio \
+    SystemUIGoogleOverlayNio
+endif
+
+ifneq ($(filter %surya,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    NexusLauncherOverlaySurya \
+    SystemUIGoogleOverlaySurya
+endif
 
 # Permissions
 PRODUCT_PACKAGES += \
