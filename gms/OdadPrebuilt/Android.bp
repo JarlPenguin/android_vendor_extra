@@ -1,7 +1,0 @@
-prebuilt_etc {
-    name: "com.google.android.odad",
-    product_specific: true,
-    sub_dir: "permissions",
-    src: "com.google.android.odad.xml",
-    filename_from_src: true,
-}

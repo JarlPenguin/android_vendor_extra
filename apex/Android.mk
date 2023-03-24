@@ -18,16 +18,6 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := CaptivePortalLoginGoogle
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := CaptivePortalLoginGoogle/CaptivePortalLoginGoogle.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_CLASS := APPS
-LOCAL_OVERRIDES_PACKAGES := CaptivePortalLogin
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := ModuleMetadataGoogle
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := ModuleMetadataGoogle/ModuleMetadataGoogle.apk
@@ -60,36 +50,4 @@ ifeq ($(MAINLINE_INCLUDE_WIFI_MODULE),true)
 LOCAL_REQUIRED_MODULES += \
     com.google.android.wifi
 endif
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := NetworkStackGoogle
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := NetworkStackGoogle/NetworkStackGoogle.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_CLASS := APPS
-LOCAL_PRIVILEGED_MODULE := true
-LOCAL_OVERRIDES_PACKAGES := NetworkStack
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-LOCAL_PRIVATE_PLATFORM_APIS := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := PrebuiltGoogleAdservicesTvp
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := PrebuiltGoogleAdservicesTvp/PrebuiltGoogleAdservicesTvp.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_PRODUCT_MODULE := true
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := PrebuiltGoogleTelemetryTvp
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := PrebuiltGoogleTelemetryTvp/PrebuiltGoogleTelemetryTvp.apk
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_PRODUCT_MODULE := true
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)

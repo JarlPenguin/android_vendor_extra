@@ -62,11 +62,7 @@ PRODUCT_PACKAGES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    CaptivePortalLoginGoogle \
-    ModuleMetadataGoogle \
-    NetworkStackGoogle \
-    PrebuiltGoogleAdservicesTvp \
-    PrebuiltGoogleTelemetryTvp
+    ModuleMetadataGoogle
 
 # Google Apexes
 PRODUCT_PACKAGES += \

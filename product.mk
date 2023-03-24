@@ -1,12 +1,3 @@
-# Apps
-PRODUCT_PACKAGES += \
-    Drive \
-    GCS \
-    MaestroPrebuilt \
-    Maps \
-    OdadPrebuilt \
-    PrebuiltGmail
-
 # CarrierSettings
 #ifneq ($(filter %nio %surya,$(TARGET_PRODUCT)),)
 #$(call inherit-product, vendor/extra/config/carrier_settings.mk)
@@ -42,10 +33,6 @@ PRODUCT_PACKAGES += \
     NexusLauncherOverlaySurya \
     SystemUIGoogleOverlaySurya
 endif
-
-# Permissions
-PRODUCT_PACKAGES += \
-    com.google.android.odad
 
 # Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
