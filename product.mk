@@ -16,6 +16,10 @@ MAINLINE_INCLUDE_WIFI_MODULE := true
 include vendor/extra/config/apex.mk
 endif
 
+# Permissions
+PRODUCT_PACKAGES += \
+    quick_tap
+
 # Overlays
 PRODUCT_PACKAGES += \
     GoogleConfigOverlayExtra \
