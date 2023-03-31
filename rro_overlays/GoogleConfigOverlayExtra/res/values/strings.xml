@@ -3,4 +3,5 @@
     <string name="config_defaultAssistantAccessComponent">com.google.android.ext.services/android.ext.services.notification.Assistant</string>
     <string name="config_defaultCaptivePortalLoginPackageName">com.google.android.captiveportallogin</string>
     <string name="config_servicesExtensionPackage">com.google.android.ext.services</string>
+    <string name="config_systemBluetoothStack">com.google.android.bluetooth</string>
 </resources>
